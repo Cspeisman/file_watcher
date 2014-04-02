@@ -10,7 +10,7 @@ while true do
   
   files = []
   filetypes.each {|type|
-  files += Dir.glob( File.join( watch_folder, "**", "*.#{type}"))
+  files += Dir.glob( File.join( watch_folder, "**", "*.#{type}"))}
  
  
   files_timestamps = files.collect {|f| [ f, File.stat(f).mtime.to_i] }
